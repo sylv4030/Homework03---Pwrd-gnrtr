@@ -33,7 +33,7 @@ function generatePassword(){
    return generatePassword()
  }
 
- //set variables and use confirm (Thanks for classmate Mike H!) to check what character types to use
+ //set variables and use confirm (Thanks for classmate Kyle!) to check what character types to use
 var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
 var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
 var yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
