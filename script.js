@@ -31,9 +31,14 @@ function generatePassword(){
   var answer ="";  
   var charAmount = prompt("How long would you like your password between 8 and 128 characters?");
   //check to be sure character amount is not less than 8 or more than 128, if it fails check prompt again
- if(charAmount<8 || charAmount>128){
+ if(charAmount<8)  {
   //added alert if unallowable number is chosen
-   alert("Please choose a number between 8 and 128");
+   alert("Please choose a number greater than 8");
+   return generatePassword();
+ }
+
+ if(charAmount>128) {
+   alert("Please choose a number less than 128");
    return generatePassword();
  }
    
@@ -103,6 +108,9 @@ if (!validate) {
 }
 //iterate random choices from the selected character types
 //edited as password was one character too long
+
+
+
 for(var i = 0; i < charAmount; i++){
 
  answer += values.charAt(Math.floor(Math.random() * Math.floor(values.length)));
