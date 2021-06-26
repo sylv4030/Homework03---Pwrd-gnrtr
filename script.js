@@ -19,6 +19,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+  alert("Your password is: "  + password);
 }
 
 // Add event listener to generate button
@@ -45,10 +46,10 @@ function generatePassword(){
 
  function check(){
 
-  var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
-  var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
-  var yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
-  var yesChar = confirm("Include special characters? Click OK for yes or cancel for no");
+  let yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
+  let yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
+  let yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
+  let yesChar = confirm("Include special characters? Click OK for yes or cancel for no");
  
 
 //check answers to character types and then use characters set above
@@ -108,7 +109,9 @@ for(var i = 0; i < charAmount; i++){
  } 
 return answer;
 
+
 }
+
 
 
 
