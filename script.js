@@ -33,11 +33,17 @@ function generatePassword(){
  if(charAmount<8 || charAmount>128){
   //added alert if unallowable number is chosen
    alert("Please choose a number between 8 and 128");
-   return generatePassword()
+   return generatePassword();
  }
+   
+  else {check ()
+  }
  
 
  //set variables and use confirm (Thanks for classmate Kyle!) to check what character types to use
+ //put this in a new function to keep checking
+
+ function check(){
 
   var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
   var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
@@ -61,6 +67,7 @@ if(yesNumber){
 if(yesChar){
   values += specChar
 }
+ 
 
 //Try to vailidate that at least one type of character was selected and used
 let validate = (yesUpper || yesLower || yesNumber || yesChar)
@@ -68,27 +75,29 @@ let validate = (yesUpper || yesLower || yesNumber || yesChar)
 if (!validate) {
   alert("Please choose a character type");
   //ran the character confirm again if validate does not pass rather than starting the generatePassword function
-  var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
-  var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
-  var yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
-  var yesChar = confirm("Include special characters? Click OK for yes or cancel for no");
+  // var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
+  // var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
+  // var yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
+  // var yesChar = confirm("Include special characters? Click OK for yes or cancel for no");
+  check();
+}
   
 
-if(yesUpper){
-  values += uCase
-}
+// if(yesUpper){
+//   values += uCase
+// }
 
-if(yesLower){
-  values += lCase
-}
+// if(yesLower){
+//   values += lCase
+// }
 
-if(yesNumber){
-  values += number
-}
+// if(yesNumber){
+//   values += number
+// }
 
-if(yesChar){
-  values += specChar
-}
+// if(yesChar){
+//   values += specChar
+// }
  
 }
 //iterate random choices from the selected character types
