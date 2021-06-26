@@ -41,7 +41,7 @@ function generatePassword(){
    alert("Please choose a number less than 128");
    return generatePassword();
  }
-   
+  //call check function 
   else {check ()
   }
  
@@ -80,43 +80,20 @@ let validate = (yesUpper || yesLower || yesNumber || yesChar)
 
 if (!validate) {
   alert("Please choose a character type");
-  //ran the character confirm again if validate does not pass rather than starting the generatePassword function
-  // var yesUpper = confirm("Include upper case letters? Click OK for yes or cancel for no");
-  // var yesLower = confirm("Include lower case letters? Click OK for yes or cancel for no");
-  // var yesNumber = confirm("Include numbers? Click OK for yes or cancel for no");
-  // var yesChar = confirm("Include special characters? Click OK for yes or cancel for no");
   check();
 }
   
-
-// if(yesUpper){
-//   values += uCase
-// }
-
-// if(yesLower){
-//   values += lCase
-// }
-
-// if(yesNumber){
-//   values += number
-// }
-
-// if(yesChar){
-//   values += specChar
-// }
- 
 }
 //iterate random choices from the selected character types
 //edited as password was one character too long
 
 
-
 for(var i = 0; i < charAmount; i++){
 
- answer += values.charAt(Math.floor(Math.random() * Math.floor(values.length)));
- } 
-return answer;
-
+  answer += values[Math.floor(Math.random() * values.length)];
+  } 
+ return answer;
+ 
 
 }
 
